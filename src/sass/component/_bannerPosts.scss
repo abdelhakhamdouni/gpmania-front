@@ -1,0 +1,78 @@
+.bannerPosts{
+    flex-wrap: wrap;
+    border-left: 1px solid $light;
+    position: fixed;
+    right: 0;
+    top: 5em;
+    background-color: $dark;
+    z-index: 999;
+    .posts{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: .5em 2em;
+        padding-right: 5em;
+        height: 100vh;
+        overflow: auto;
+    }
+    h2{
+        color: $light;
+        padding-left: 2em;
+    }
+    .post{
+        margin: .5em auto 1em;
+        height: 8em;
+        width: 16em;
+        .post_footer{
+            display: none;
+        }
+        .post_image{
+            img{
+                height: 100%;
+            }
+        }
+        .post_description{
+            display: none;
+        }
+        .post_header{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 990px){
+    .bannerPosts{
+        transform: scaleX(1.2);
+        transform-origin: right;
+        animation: shrinkNav .3s linear both;
+        width: 50vw;
+        height: calc(100vh - 7em);
+        overflow: hidden;
+        h2{
+            font-size: .8em;
+            padding: 0;
+            margin: .5em ;
+        }
+        .posts{
+            height: 90%;
+            overflow-y: auto;
+            margin-bottom: 8em;
+            padding: 0;
+            .post{
+                width: 12em !important;
+                transform: scale(.8);
+                margin: 0 auto;
+            }
+            &:nth-last-child(n){
+                margin-bottom: 5em;
+            }
+        }
+        &.shown{
+            display: flex;
+            transform: scaleX(0);
+            transform-origin: right;
+            animation: scaleNav .3s linear both;
+        }
+    }
+}

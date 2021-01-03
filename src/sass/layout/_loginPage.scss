@@ -1,0 +1,179 @@
+.logscreen{
+    color: #666;
+    width: 65%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    .logo{
+        text-align: center;
+        padding: 2em 0;
+        img{
+            width: 60%;
+        }
+    } 
+    .small{
+        padding: 0 2em 2em;
+        width: 50%;
+        text-align: center;
+        font-size: .9em;
+    }
+    form {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        .form-group{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            label{
+                font-size: 1.2em;
+                padding: 1em 0 .2em;
+            }
+            input{
+                padding: .5em;
+                border:1px solid lightgray;
+                border-radius: 5px;
+                font-size: 1.2em;
+                width: 80%;
+            }
+           
+            
+        }
+        .form-group{
+            padding: 0;
+            input{
+                width: 75%;
+            }
+            .input-group{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                padding: 0;
+                margin: 0;
+                input{
+                    width: 100%
+                }
+                span{
+                    position: absolute;
+                    left: 100%;
+                    top: 50%;
+                    transform: translate(-30px, -50%);
+                }
+            }
+            &.form-check{
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1em;
+                label{
+                    padding: 0;
+                    margin: 0;
+                }
+                input{
+                    width: unset;
+                }
+            }
+        }
+
+        button{
+            background-color: $primary;
+            padding: .5em 1em;
+            color: white;
+            align-self: center;
+            margin-top: 2em;
+            font-size: 1.1em;
+        }
+    }
+    .helpers{
+        margin-top: 1.5em;
+        width: 100%;
+        button{
+            background-color: none;
+            color: $primary;
+            font-size: 1.1em;
+            margin-top: .5em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            cursor: pointer;
+          &:hover{
+              color: $orange;
+          }
+        }
+    }
+}
+
+@media screen and (max-width: 990px){
+    .logscreen{
+        width: 100%;
+        
+        p.small{
+            margin: 0;
+            padding: 0;
+            width: 80%;
+        }
+        form{
+            width: 90%;
+            .form-group{
+                padding: 0;
+                input{
+                    width: 75%;
+                }
+                .input-group{
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 80%;
+                    padding: 0;
+                    margin: 0;
+                    input{
+                        width: 100%
+                    }
+                    span{
+                        position: absolute;
+                        left: 100%;
+                        top: 50%;
+                        transform: translate(-30px, -50%);
+                    }
+                }
+            }
+        }
+    }
+    .logscreen.register{
+        .logo{
+            padding: 2em 0 1em;
+        }
+        height: unset;
+        div h1{
+            padding: 0;
+            margin: 0;
+            font-size: 1.2em;
+        }
+        form{
+            .form-group{
+                input{
+                    padding: .3em;
+                    font-size: 1em;
+                }
+                label{
+                    font-size: 1em;
+
+                }
+            }
+            button{
+                margin-top: 1em;
+            }
+        }
+        padding-bottom: 3em;
+    }
+}

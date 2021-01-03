@@ -1,0 +1,91 @@
+.postScreen{
+    padding-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 55%;
+    padding-bottom: 8em;
+    h1{
+        color: $light;
+        font-size: 2.5em;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 5px $orange, 4px 4px 5px $blue;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .post {
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        border-bottom: 1px solid $light;
+        height: unset;
+        background-color: rgb(22, 21, 21);
+        border-radius: .5em;
+        overflow: hidden;
+        .post_image{
+            width: 100%;
+            img{
+                height: 100%;
+            }
+        }
+        .post_header{
+            //display: none;
+        }
+        .post_description{
+            order: 1;
+            height: unset;
+            text-decoration: none;
+            color: $light;
+            font-weight: 300;
+            line-height: 1.8em;
+            text-align: left;
+            text-indent: 2em;
+            cursor: auto;
+        }
+
+    }
+}
+
+@media screen and (max-width: 990px){
+    .postScreen{
+        h1{
+            padding-bottom: 1em;
+        }
+        width: 100%;
+        margin: 0;
+        padding: 3em 0;
+        .post{
+            width: 100%;
+            margin: 0 0 1em 0;
+            border-radius: 0;
+            .post_footer{
+                font-size: .8em !important;
+                .date{
+                    color: aqua !important;
+                }
+            }
+        }
+        .comment-list{
+            width: 95%;
+            padding: 0;
+            margin: 0 auto;
+            .comment{
+                width: 95%;
+                &.child{
+                    width: 90% !important;
+                }
+                .comment-body{
+                    .comment-comment{
+                        padding: 0;
+                    }
+                    .comment-footer{
+                        button{
+                            font-size: .7em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+body, html{
+    width: 100%;
+}
+.app{
+    background: $dark;
+    padding-top: 3.5em;
+    min-height: 100vh;
+    width: 100%;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    padding-top: 2em;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 8em;
+}
+
+.fa-heart,.fa-comment-alt{
+    color: $orange;
+    font-size: 1.5em;
+}
+button, .button{
+    background-color: transparent;
+    border: 1px solid $light;
+    color: $light;
+    border-radius: 5px;
+    margin-right: .5em;
+    cursor: pointer;
+    &:hover{
+        color: $orange;
+    }
+}
+
+.warning{
+    background-color: rgb(253, 224, 191);
+    color: rgb(177, 85, 0);
+    padding: 1.5em 2em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+

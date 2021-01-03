@@ -1,0 +1,148 @@
+.editScreen{
+    color: #666;
+    width: 65%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .profile-header {
+        label {
+            display: block;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            
+            img{
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            &::after{
+                content: "Changer d'avatar";
+                position: absolute;
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: rgb(255, 254, 254);
+                font-size: 1.5em;
+                font-weight: 800;
+                text-shadow: 0 0 15px black;
+                padding: .5em 0;
+                background-color: rgba(2, 41, 100, 0.521);
+                cursor: pointer;
+            }
+        }
+        input{
+            display: none;
+        }
+    }
+    .warning{
+        background-color: rgb(253, 224, 191);
+        color: rgb(177, 85, 0);
+        padding: 1em 2em;
+        margin-bottom: 1em;
+    }
+    .logo{
+        text-align: center;
+        padding: 2em 0;
+        img{
+            width: 60%;
+        }
+    } 
+    .small{
+        padding: 0 2em 2em;
+        width: 50%;
+        text-align: center;
+        font-size: .9em;
+    }
+    form {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        .form-group{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            label{
+                font-size: 1.2em;
+                padding: 1em 0 .2em;
+            }
+            input{
+                padding: .5em;
+                border:1px solid lightgray;
+                border-radius: 5px;
+                font-size: 1.2em;
+                width: 80%;
+            }
+            &.form-check{
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1em;
+                label{
+                    padding: 0;
+                    margin: 0;
+                }
+                input{
+                    width: unset;
+                }
+            }
+            
+        }
+        button{
+            background-color: $primary;
+            padding: .5em 1em;
+            color: white;
+            align-self: center;
+            margin-top: 2em;
+            font-size: 1.1em;
+        }
+    }
+    .helpers{
+        margin-top: 1.5em;
+        width: 100%;
+        button{
+            background-color: none;
+            color: $primary;
+            font-size: 1.1em;
+            margin-top: .5em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            cursor: pointer;
+          &:hover{
+              color: $orange;
+          }
+        }
+    }
+}
+
+@media screen and (max-width: 990px){
+    .editScreen{
+        justify-content: flex-start;
+        padding-top: 3em;
+        form{
+            width: 100%;
+        }
+    }
+    .profile .profile-action button, .profile .profile-action{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        .button, button{
+            margin: 1em 2em;
+            padding: .5em;
+            font-size: .8em;
+        }
+    }
+}
