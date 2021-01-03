@@ -1,5 +1,5 @@
 const config = {
-  url: `http://192.168.1.63:8000/api/`,
+  url: `https://groupomania-back.herokuapp.com/api/`,
 };
 
 export default config;
